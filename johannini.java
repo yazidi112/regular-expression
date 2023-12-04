@@ -34,7 +34,7 @@ public class Main {
             if(Pattern.matches(regex, a)){
                 param = a.replaceAll(regex,"$1");
                 value = a.replaceAll(regex,"$2");
-                if(Pattern.matches(".'.",value)){
+                if(Pattern.matches(".*'.*",value)){
                     value = value.replaceAll("'","''");
                 }
                 output+="INSERT INTO GER_JOHANINI VALUES ('"+codeClient+"','"+section.trim()+"', '"+param.trim()+"', '"+value.trim()+"');\n";
