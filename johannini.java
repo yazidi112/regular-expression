@@ -30,7 +30,7 @@ public class Main {
             if(Pattern.matches(regex, a)){
                 section = a.replaceAll(regex,"$1");
             }
-            regex = "(.)=(.)";
+            regex = "(.*)=(.*)";
             if(Pattern.matches(regex, a)){
                 param = a.replaceAll(regex,"$1");
                 value = a.replaceAll(regex,"$2");
